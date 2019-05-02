@@ -9,42 +9,14 @@ import {
 
 import { withBaseDir } from '../util/helpers';
 
-const items = [
-  {
-    src: withBaseDir`/static/images/home/nss1.jpg`,
-    altText: 'Slide 1',
-/*    caption: 'Slide 1',
-    header: 'Slide 1 Header'*/
-  },
-  {
-    src: withBaseDir`/static/images/home/nss2.jpg`,
-    altText: 'Slide 2',
-/*    caption: 'Slide 2',
-    header: 'Slide 2 Header'*/
-  },
-  {
-    src: withBaseDir`/static/images/home/nss3.jpg`,
-    altText: 'Slide 3',
-/*    caption: 'Slide 2',
-    header: 'Slide 2 Header'*/
-  },
-  {
-    src: withBaseDir`/static/images/home/nss4.jpg`,
-    altText: 'Slide 4',
-/*    caption: 'Slide 2',
-    header: 'Slide 2 Header'*/
-  },
-  {
-    src: withBaseDir`/static/images/home/nss5.jpg`,
-    altText: 'Slide 5',
-/*    caption: 'Slide 3',
-    header: 'Slide 3 Header'*/
-  }
-];
-
 class ResponsiveCarousel extends React.Component {
   state = { 
     activeIndex: 0
+  }
+
+  constructor(props) {
+    super(props);
+    this.items = this.props.items;
   }
 
   onExiting = () => {
@@ -57,13 +29,13 @@ class ResponsiveCarousel extends React.Component {
 
   next = () => {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+    const nextIndex = this.state.activeIndex === this.items.length - 1 ? 0 : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous = () => {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+    const nextIndex = this.state.activeIndex === 0 ? this.items.length - 1 : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
@@ -75,7 +47,7 @@ class ResponsiveCarousel extends React.Component {
   render = () => {
     const { activeIndex } = this.state;
 
-    const slides = items.map((item) => {
+    const slides = this.items.map((item) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -94,7 +66,7 @@ class ResponsiveCarousel extends React.Component {
         next={this.next}
         previous={this.previous}
       >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+        <CarouselIndicators items={this.items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
