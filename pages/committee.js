@@ -7,7 +7,7 @@ import { withBaseDir } from '../util/helpers';
 const infoTeam = [
 	{
 		src: withBaseDir`/static/images/photos/rohin.jpeg`,
-		name: 'Rohin Matthew',
+		name: 'Rohin Mathew',
 		position: 'Chairperson',
 	},
 	{
@@ -78,12 +78,12 @@ const infoTeam = [
 	{
 		src: withBaseDir`/static/images/photos/priyal.jpg`,
 		name: 'Priyal Dani',
-		position: 'Publiciy Head',
+		position: 'Publicity Head',
 	},
 	{
 		src: withBaseDir`/static/images/photos/neha.jpg`,
 		name: 'Neha Shah',
-		position: 'Publiciy Head',
+		position: 'Publicity Head',
 	},
 	{
 		src: withBaseDir`/static/images/photos/shreya.jpg`,

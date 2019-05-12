@@ -63,7 +63,7 @@ export default () => (
                 develop lives to a great extent. For a public platform, the
                 level of responsibility and satisfaction is raised to another
                 extent because it's something that’s affecting the bearers lives
-                👨‍👩‍👧‍👦 During our special camp, we came across a school in Ambewadi
+                👨‍👩‍👧‍👦 &nbsp;During our special camp, we came across a school in Ambewadi
                 village, which lacked many amenities needed for the growth of
                 the students. One of the reasons for that was the unaffordable
                 electric supply. We then planned and implemented our technical

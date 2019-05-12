@@ -79,6 +79,7 @@ export default () => (
           <h4 className="display-5 mx-auto">
             <strong>From the Principal's Desk</strong>
           </h4>
+          <br />
           <img
             className="img-fluid shadow border"
             style={{ width: "inherit" }}
@@ -86,6 +87,7 @@ export default () => (
           />
         </Col>
       </Row>
+      <br />
       <Row>
         <Col>
           <p className="lead">

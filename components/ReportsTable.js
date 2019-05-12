@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Button } from 'reactstrap';
+import { Table, Button, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { withBaseDir } from '../util/helpers';
 
 import "./ReportsTable.css";
@@ -16,29 +16,81 @@ const ReportsTable = () => (
         <tbody>
             <tr>
                 <td>
-                    <a href={withBaseDir`/static/documents/report18-19.pdf`} target="_blank">2018 - 2019</a>
+                    <UncontrolledDropdown setActiveFromChild>
+                        <DropdownToggle tag="a" className="nav-link" caret>
+                            2018 - 2019
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/r18-19.pdf`} target="_blank">Report and Events</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>                                  
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href={withBaseDir`/static/documents/report17-18.pdf`} target="_blank">2017 - 2018</a>
+                    <UncontrolledDropdown setActiveFromChild>
+                        <DropdownToggle tag="a" className="nav-link" caret>
+                            2017 - 2018
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/r17-18.pdf`} target="_blank">Report</DropdownItem>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/l17-18.pdf`} target="_blank">Events</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>                
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href={withBaseDir`/static/documents/report16-17.pdf`} target="_blank">2016 - 2017</a>
+                    <UncontrolledDropdown setActiveFromChild>
+                        <DropdownToggle tag="a" className="nav-link" caret>
+                            2016 - 2017
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/r16-17.pdf`} target="_blank">Report</DropdownItem>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/l16-17.pdf`} target="_blank">Events</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>                 
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href={withBaseDir`/static/documents/report15-16.pdf`} target="_blank">2015 - 2016</a>
+                    <UncontrolledDropdown setActiveFromChild>
+                        <DropdownToggle tag="a" className="nav-link" caret>
+                            2015 - 2016
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/r15-16.pdf`} target="_blank">Report</DropdownItem>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/l15-16.pdf`} target="_blank">Events</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>                
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href={withBaseDir`/static/documents/report14-15.pdf`} target="_blank">2014 - 2015</a>
+                    <UncontrolledDropdown setActiveFromChild>
+                        <DropdownToggle tag="a" className="nav-link" caret>
+                            2014 - 2015
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/r14-15.pdf`} target="_blank">Report</DropdownItem>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/l14-15.pdf`} target="_blank">Events</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>                
                 </td>
-            </tr>                                    
+            </tr> 
+            <tr>
+                <td>
+                    <UncontrolledDropdown setActiveFromChild>
+                        <DropdownToggle tag="a" className="nav-link" caret>
+                            2013 - 2014
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/r13-14.pdf`} target="_blank">Report</DropdownItem>
+                            <DropdownItem tag="a" href={withBaseDir`/static/documents/l13-14.pdf`} target="_blank">Events</DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>                
+                </td>
+            </tr>                                                
         </tbody>
     </Table>
 );
